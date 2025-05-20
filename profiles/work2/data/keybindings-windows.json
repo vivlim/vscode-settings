@@ -154,5 +154,37 @@
         "key": "escape",
         "command": "-gitlens.key.escape",
         "when": "editorTextFocus && gitlens:key:escape && !findWidgetVisible && !isInEmbeddedEditor && !renameInputVisible && !suggestWidgetVisible"
+    },
+    {
+        "key": "j",
+        "command": "-list.focusDown",
+        "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "list.focusDown",
+        "when": "notebookEditorFocused"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "list.focusUp",
+        "when": "notebookEditorFocused"
+    },
+    {
+        "key": "k",
+        "command": "-list.focusUp",
+        "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
+    },
+    {
+        "key": "i",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "notebook.cell.edit",
+                "extension.vim_insert",
+            ]
+        },
+        "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
     }
+
 ]
